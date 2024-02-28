@@ -1,6 +1,10 @@
 ## Portfolio Javier Cuenca Gento
 
- - Personal
+ ⚡ Personal
+
+ 🙏🏼 Initiated with [Create Appncy](https://github.com/goncy/create-appncy)
+
+ ⚒️ Going to use TypeScript, Next.js, Tailwind, shadcn UI, Vercel for hosting...
 
 > [!NOTE]
 > Made by Javier Cuenca Gento.
