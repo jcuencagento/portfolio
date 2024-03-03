@@ -6,7 +6,7 @@ import Studies from "@/components/Studies";
 
 export default function HomePage() {
     return (
-        <div className="m-auto flex h-full w-4/5 flex-col gap-6 lg:gap-12">
+        <div className="m-auto flex w-4/5 flex-col gap-6 lg:gap-12">
             <Introduction />
             <Studies />
             <Experience />
