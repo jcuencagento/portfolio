@@ -3,7 +3,7 @@ import type {Metadata} from "next";
 import "@/app/globals.css";
 import Image from "next/image";
 
-import {ThemeProvider} from "@/components/theme-provider";
+import {ThemeProvider} from "@/components/ui/theme-provider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -32,11 +32,9 @@ export default function RootLayout({children}: ChildrenProps) {
         <html suppressHydrationWarning lang="en">
             <body>
                 <ThemeProvider disableTransitionOnChange enableSystem attribute="class" defaultTheme="system">
-                    <div className="container mx-auto flex min-h-screen max-w-2xl flex-col px-4 py-5">
-                        <div className="flex-1">
-                            <Header />
-                            {children}
-                        </div>
+                    <div className="container mx-auto flex min-h-screen max-w-6xl flex-col px-4 py-5">
+                        <Header />
+                        <div className="flex-1">{children}</div>
                         <Footer />
                         <Image
                             priority

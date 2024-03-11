@@ -25,7 +25,7 @@ export default function ThemeSwitch() {
         <div className="flex items-center justify-center">
             <button
                 aria-label="Switch theme"
-                className="text-text hover:bg-overlay ml-1 flex h-10 w-10 flex-col items-center justify-center overflow-hidden rounded-md font-medium duration-200 ease-in-out sm:p-4"
+                className="text-text hover:bg-overlay ml-1 flex h-12 w-12 flex-col items-center justify-center overflow-hidden rounded-md font-medium duration-200 ease-in-out sm:p-4 lg:h-10 lg:w-12"
                 type="button"
                 onClick={onThemeChange}
             >
