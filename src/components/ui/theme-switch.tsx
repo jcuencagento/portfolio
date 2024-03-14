@@ -32,12 +32,12 @@ export default function ThemeSwitch() {
                 <AnimatePresence mode="wait">
                     {resolvedTheme === "light" && (
                         <motion.span key="theme1" animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -10}} initial={{opacity: 0, y: 10}}>
-                            <Moon size={15} />
+                            <Moon size={22} />
                         </motion.span>
                     )}
                     {resolvedTheme === "dark" && (
                         <motion.span key="theme2" animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -10}} initial={{opacity: 0, y: 10}}>
-                            <Sun size={15} />
+                            <Sun size={22} />
                         </motion.span>
                     )}
                 </AnimatePresence>
