@@ -10,8 +10,8 @@ export default function Dropdown() {
     return (
         <Menu as="div" className="relative inline-block text-left">
             <div>
-                <Menu.Button className="inline-flex justify-center rounded-md bg-transparent px-3 py-2 text-sm font-semibold shadow-sm ">
-                    <BiCaretDownCircle aria-hidden="true" className="h-6 w-6 text-primary hover:transform-110" />
+                <Menu.Button className="inline-flex justify-center rounded-md bg-transparent px-3 py-2 text-sm font-semibold">
+                    <BiCaretDownCircle aria-hidden="true" className="h-6 w-6 text-primary duration-200 ease-in-out hover:scale-110" />
                 </Menu.Button>
             </div>
 
@@ -24,18 +24,18 @@ export default function Dropdown() {
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95"
             >
-                <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute right-0 z-10 mt-2 w-72 origin-top-right rounded-md bg-primary focus:outline-none">
                     <div className="py-1">
                         <Menu.Item>
                             {({active}) => (
                                 <a
                                     className={classNames(
-                                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                                        active ? "bg-gray-100 text-gray-900" : "text-gray-200",
                                         "block px-4 py-2 text-sm",
                                     )}
                                     href="/"
                                 >
-                                    Account settings
+                                    Home
                                 </a>
                             )}
                         </Menu.Item>
@@ -43,12 +43,12 @@ export default function Dropdown() {
                             {({active}) => (
                                 <a
                                     className={classNames(
-                                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                                        active ? "bg-gray-100 text-gray-900" : "text-gray-200",
                                         "block px-4 py-2 text-sm",
                                     )}
-                                    href="/"
+                                    href="/exp"
                                 >
-                                    Support
+                                    Experience
                                 </a>
                             )}
                         </Menu.Item>
@@ -56,26 +56,26 @@ export default function Dropdown() {
                             {({active}) => (
                                 <a
                                     className={classNames(
-                                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                                        active ? "bg-gray-100 text-gray-900" : "text-gray-200",
                                         "block px-4 py-2 text-sm",
                                     )}
-                                    href="/"
+                                    href="/projects"
                                 >
-                                    License
+                                    Projects
                                 </a>
                             )}
                         </Menu.Item>
-                        <form action="#" method="POST">
+                        <form action="/misc" method="POST">
                             <Menu.Item>
                                 {({active}) => (
                                     <button
                                         className={classNames(
-                                            active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                                            active ? "bg-gray-100 text-gray-900" : "text-gray-200",
                                             "block w-full px-4 py-2 text-left text-sm",
                                         )}
                                         type="submit"
                                     >
-                                        Sign out
+                                        Misc
                                     </button>
                                 )}
                             </Menu.Item>

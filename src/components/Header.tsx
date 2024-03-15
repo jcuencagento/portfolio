@@ -29,7 +29,7 @@ export default function Header() {
                 {renderIcon()}
                 <Dropdown />
             </div>
-            <div className="m-auto">
+            <div className="m-auto w-20">
                 <ThemeSwitch />
             </div>
         </header>

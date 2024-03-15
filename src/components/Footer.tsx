@@ -8,13 +8,28 @@ import Contact from "./Contact";
 
 function Footer() {
     const [mobile, setMobile] = useState(false);
+    const [isAtBottom, setIsAtBottom] = useState(false);
 
     useEffect(() => {
         setMobile(window.innerWidth < 620);
     }, []);
 
+    useEffect(() => {
+        function handleScroll() {
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            setIsAtBottom(windowHeight + scrollTop === documentHeight);
+        }
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
-        <div className="fixed bottom-0 m-auto mb-6 mt-6 flex w-4/5 justify-between text-gray-500 lg:mb-12 lg:w-1/2">
+        <div className="relative bottom-0 m-auto mb-4 mt-6 flex w-4/5 justify-between text-gray-500 lg:mb-12 lg:w-1/2">
             <div className="flex flex-row items-center space-x-1">
                 <p style={mobile ? {fontSize: "0.65em"} : {}}>Javier Cuenca Gento</p>
                 <div className="flex gap-1 lg:gap-2">
