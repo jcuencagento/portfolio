@@ -7,7 +7,7 @@ import {Button} from "./ui/button";
 
 export default function ProjectsComponent() {
     return (
-        <div className="flex h-auto w-full flex-col items-center justify-center gap-4 border border-black bg-green-300 p-6 text-xl font-bold">
+        <div className="col-span-2 row-span-1 rounded-xl border border-black bg-green-300 p-4 text-xl font-bold leading-[4rem]">
             <div>hi, These are my projects</div>
             <Link href="/projects">
                 <Button className="flex" variant="secondary">

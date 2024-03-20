@@ -8,24 +8,9 @@ import Contact from "./Contact";
 
 function Footer() {
     const [mobile, setMobile] = useState(false);
-    const [isAtBottom, setIsAtBottom] = useState(false);
 
     useEffect(() => {
         setMobile(window.innerWidth < 620);
-    }, []);
-
-    useEffect(() => {
-        function handleScroll() {
-            const windowHeight = window.innerHeight;
-            const documentHeight = document.documentElement.scrollHeight;
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-            setIsAtBottom(windowHeight + scrollTop === documentHeight);
-        }
-
-        window.addEventListener("scroll", handleScroll);
-
-        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return (
