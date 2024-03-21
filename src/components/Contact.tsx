@@ -29,7 +29,11 @@ function Contact() {
 
     return (
         <>
-            <BsMailbox className="cursor-pointer transition-colors duration-100 hover:text-primary" size={20} onClick={toggleModal} />
+            <BsMailbox
+                className="cursor-pointer text-primary/60 transition-colors duration-100 hover:scale-110 hover:text-primary"
+                size={20}
+                onClick={toggleModal}
+            />
             {isModalOpen ? (
                 <div
                     className="fixed left-0 top-0 flex h-full w-full items-center justify-center bg-black bg-opacity-60"
