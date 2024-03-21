@@ -11,8 +11,8 @@ export default function HomePage() {
             <Misc />
             <Introduction />
             <Experience />
-            <Studies />
             <Random />
+            <Studies />
             <ProjectsComponent />
         </div>
     );

@@ -5,6 +5,9 @@ const nextConfig = {
             fullUrl: true,
         },
     },
+    images: {
+        formats: ["image/webp"],
+    },
 };
 
 module.exports = nextConfig;
