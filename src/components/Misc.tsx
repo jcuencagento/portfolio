@@ -26,7 +26,7 @@ export default function Misc() {
     }, []);
 
     return (
-        <div className="col-span-1 row-span-1 transform-gpu rounded-xl bg-purple-300 p-12 text-xl font-bold leading-[4rem] duration-500 hover:scale-95 lg:p-6">
+        <div className="col-span-1 row-span-1 transform-gpu rounded-2xl bg-purple-300 p-12 text-xl font-bold leading-[4rem] duration-500 hover:scale-95 lg:p-6">
             <Link href="/misc">
                 {images.map((img, index) => (
                     <Image

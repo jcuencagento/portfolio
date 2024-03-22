@@ -5,8 +5,6 @@ import Image from "next/image";
 import donkeycode from "../../public/donkeycode_project_HD.webp";
 import compcvision from "../../public/compcvision_project_HD.webp";
 
-import {Techs} from "./ui/techs";
-
 const projectArticle = (name: string, description: string, link: string, image: StaticImageData) => {
     return (
         <article className="flex flex-col items-center rounded-lg bg-secondary/60 p-2 lg:px-6">
@@ -40,9 +38,6 @@ export default function ProjectsComponent() {
                     "https://github.com/jcuencagento/compc-vision",
                     compcvision,
                 )}
-            </div>
-            <div className="flex w-full">
-                <Techs />
             </div>
         </div>
     );
