@@ -7,7 +7,7 @@ function Footer() {
     return (
         <div className="mb-2 mt-6 flex flex-col lg:mb-4">
             <hr className="mb-4 w-full border-t border-primary/60" />
-            <div className="relative bottom-0 m-auto  flex w-4/5 justify-between lg:w-1/2">
+            <div className="relative bottom-0 m-auto flex w-full justify-around">
                 <div className="flex flex-row items-center space-x-1 text-primary">
                     <p className="text-xs font-semibold lg:text-lg">Javier Cuenca Gento</p>
                     <p className="font-extralight"> - </p>

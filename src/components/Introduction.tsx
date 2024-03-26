@@ -27,7 +27,7 @@ export default function Introduction() {
                     />
                 </article>
                 <p className="m-auto text-lg font-semibold text-primary lg:text-xl">Telecommunications engineer and software developer</p>
-                <p className="m-auto text-lg font-bold italic text-primary lg:text-xl">+5 years coding, +2 professionaly</p>
+                <p className="m-auto text-lg font-bold italic text-primary lg:text-xl">+5 years coding +2 professionally</p>
             </div>
             <Button className="flex flex-grow" variant="default">
                 Introduction

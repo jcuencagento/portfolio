@@ -41,14 +41,16 @@ function Contact() {
                     className="fixed left-0 top-0 flex h-full w-full items-center justify-center bg-black bg-opacity-60"
                     style={{marginLeft: "0"}}
                 >
-                    <div ref={modalRef} className="align-center m-auto flex-col justify-center rounded-lg bg-white p-8">
-                        <h2 className="mb-2 text-lg font-bold text-gray-800">Email contact</h2>
-                        <h6 className="mb-6 text-sm font-light text-gray-600">Write up for whatever</h6>
+                    <div ref={modalRef} className="align-center m-auto flex-col justify-center rounded-lg bg-gray-100 p-6 lg:p-12">
+                        <h2 className="mb-2 text-lg font-bold text-gray-800 lg:text-xl">Email contact</h2>
+                        <h6 className="mb-6 text-base font-light text-gray-600 lg:text-lg">Write up for whatever</h6>
                         <div className="align-center flex justify-between gap-4">
-                            <p className="m-auto text-lg font-semibold">jcuencagento@gmail.com</p>
+                            <p className="m-auto rounded-xl bg-gray-300 px-3 py-2 text-lg font-semibold text-black lg:px-4">
+                                jcuencagento@gmail.com
+                            </p>
                             <Button
                                 aria-label="Clipboard"
-                                className="m-auto"
+                                className="m-auto transform-gpu rounded-xl bg-gray-300 p-4 text-black duration-300 hover:scale-95 hover:bg-blue-300"
                                 onClick={() => {
                                     navigator.clipboard.writeText("jcuencagento@gmail.com");
                                     toast("Copied to clipboard.", {

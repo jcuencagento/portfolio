@@ -5,9 +5,11 @@ import Image from "next/image";
 import donkeycode from "../../public/donkeycode_project_HD.webp";
 import compcvision from "../../public/compcvision_project_HD.webp";
 
+import {Button} from "./ui/button";
+
 const projectArticle = (name: string, description: string, link: string, image: StaticImageData) => {
     return (
-        <article className="flex flex-col items-center rounded-lg bg-secondary/60 p-2 lg:px-6">
+        <article className="flex flex-1 flex-col items-center rounded-lg bg-secondary/60 p-2 lg:px-6">
             <p className="text-xl font-bold">{name}</p>
             <p className="text-sm font-semibold text-primary/90">{description}</p>
             <a aria-label={name} href={link} rel="noreferrer" target="_blank">
@@ -18,6 +20,11 @@ const projectArticle = (name: string, description: string, link: string, image: 
                     src={image}
                 />
             </a>
+            <div>
+                <Button className="flex flex-grow" variant="default">
+                    Introduction
+                </Button>
+            </div>
         </article>
     );
 };
@@ -25,7 +32,7 @@ const projectArticle = (name: string, description: string, link: string, image: 
 export default function ProjectsComponent() {
     return (
         <div className="col-span-1 row-span-1 transform-gpu rounded-xl p-2 font-bold leading-[4rem] duration-500 lg:col-span-2 lg:p-4">
-            <div className="m-auto mb-4 flex flex-col justify-around gap-4 lg:flex-row lg:gap-12">
+            <div className="m-auto flex h-full flex-col justify-around gap-4 lg:flex-row lg:gap-12">
                 {projectArticle(
                     "Donkey Code",
                     "Interactive typing and coding test to practice.",
