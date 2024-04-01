@@ -1,6 +1,7 @@
 import type {StaticImageData} from "next/image";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import donkeycode from "../../public/donkeycode_project_HD.webp";
 import compcvision from "../../public/compcvision_project_HD.webp";
@@ -32,7 +33,7 @@ const projectArticle = (name: string, description: string, link: string, image: 
 export default function ProjectsComponent() {
     return (
         <div className="col-span-1 row-span-1 transform-gpu rounded-xl p-2 font-bold leading-[4rem] duration-500 lg:col-span-2 lg:p-4">
-            <div className="m-auto flex h-full flex-col justify-around gap-4 lg:flex-row lg:gap-12">
+            <div className="grid auto-rows-auto grid-cols-1 gap-6 lg:grid-cols-3">
                 {projectArticle(
                     "Donkey Code",
                     "Interactive typing and coding test to practice.",
@@ -45,6 +46,16 @@ export default function ProjectsComponent() {
                     "https://github.com/jcuencagento/compc-vision",
                     compcvision,
                 )}
+                <article className="flex flex-1 flex-col items-center rounded-lg bg-secondary/60 p-2 lg:px-6">
+                    <Link aria-label="More projects in Github" href="/projects">
+                        <Image
+                            priority
+                            alt="Github"
+                            className="m-3 h-48 w-auto transform-gpu rounded-2xl duration-300 ease-in-out hover:scale-95"
+                            src={donkeycode}
+                        />
+                    </Link>
+                </article>
             </div>
         </div>
     );
