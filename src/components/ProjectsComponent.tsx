@@ -1,7 +1,13 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+"use client";
 import type {StaticImageData} from "next/image";
 
 import Image from "next/image";
 import Link from "next/link";
+import GitHubCalendar from "react-github-calendar";
 
 import donkeycode from "../../public/donkeycode_project_HD.webp";
 import compcvision from "../../public/compcvision_project_HD.webp";
@@ -31,6 +37,19 @@ const projectArticle = (name: string, description: string, link: string, image: 
 };
 
 export default function ProjectsComponent() {
+    const selectLastHalfYear = (data: any[]) => {
+        const currentYear = new Date().getFullYear();
+        const currentMonth = new Date().getMonth();
+        const shownMonths = 6;
+
+        return data.filter((activity: {date: string | number | Date}) => {
+            const date = new Date(activity.date);
+            const monthOfDay = date.getMonth();
+
+            return date.getFullYear() === currentYear && monthOfDay > currentMonth - shownMonths && monthOfDay <= currentMonth;
+        });
+    };
+
     return (
         <div className="col-span-1 row-span-1 transform-gpu rounded-xl p-2 font-bold leading-[4rem] duration-500 lg:col-span-2 lg:p-4">
             <div className="grid auto-rows-auto grid-cols-1 gap-6 lg:grid-cols-3">
@@ -46,13 +65,28 @@ export default function ProjectsComponent() {
                     "https://github.com/jcuencagento/compc-vision",
                     compcvision,
                 )}
-                <article className="flex flex-1 flex-col items-center rounded-lg bg-secondary/60 p-2 lg:px-6">
-                    <Link aria-label="More projects in Github" href="/projects">
-                        <Image
-                            priority
-                            alt="Github"
-                            className="m-3 h-48 w-auto transform-gpu rounded-2xl duration-300 ease-in-out hover:scale-95"
-                            src={donkeycode}
+                <article className="flex flex-1 flex-col items-center rounded-lg p-2 lg:px-1">
+                    <Link aria-label="More projects" className="m-auto" href="/projects">
+                        <Button>Go to Projects</Button>
+                    </Link>
+                    <Link
+                        aria-label="GitHub"
+                        className="m-auto mb-0 w-4/5 transform-gpu rounded-2xl bg-gray-200 bg-opacity-40 p-2 duration-300 ease-in-out hover:scale-95 xl:w-full"
+                        href="https://github.com/jcuencagento/"
+                        rel="noreferrer"
+                        target="_blank"
+                    >
+                        <GitHubCalendar
+                            hideColorLegend
+                            hideTotalCount
+                            blockMargin={3}
+                            style={{overflow: "hidden", padding: "0.5vh"}}
+                            theme={{
+                                light: ["#d2eed8", "#b3ff6a", "#7dff00", "#48bf53", "#11823b"],
+                                dark: ["#d2eed8", "#b3ff6a", "#7dff00", "#48bf53", "#11823b"],
+                            }}
+                            transformData={selectLastHalfYear}
+                            username="jcuencagento"
                         />
                     </Link>
                 </article>

@@ -12,7 +12,7 @@ import erwin from "../../public/anime/erwin-vertical.webp";
 import levi from "../../public/anime/levi-vertical.webp";
 import levi2 from "../../public/anime/levi-horizontal.webp";
 
-const images = [aot, aot2, eren, eren2, eren3, erwin, levi, levi2];
+const images = [eren3, levi, aot2, eren, levi2, eren2, aot, erwin, eren];
 
 export default function Misc() {
     const [imageIndex, setImageIndex] = useState(0);
@@ -26,7 +26,7 @@ export default function Misc() {
     }, []);
 
     return (
-        <div className="col-span-1 row-span-1 transform-gpu rounded-2xl bg-purple-300 p-12 text-xl font-bold leading-[4rem] duration-500 hover:scale-95 lg:p-6">
+        <div className="col-span-1 row-span-1 transform-gpu rounded-2xl p-12 text-xl font-bold leading-[4rem] duration-500 hover:scale-95 lg:p-6">
             <Link href="/misc">
                 {images.map((img, index) => (
                     <Image
