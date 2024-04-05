@@ -1,6 +1,5 @@
 import type {Metadata} from "next";
 
-import "rsuite/dist/rsuite-no-reset.min.css";
 import "@/app/globals.css";
 import Image from "next/image";
 import dotenv from "dotenv";

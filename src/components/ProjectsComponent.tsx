@@ -28,9 +28,7 @@ const projectArticle = (name: string, description: string, link: string, image: 
                 />
             </a>
             <div>
-                <Button className="flex flex-grow" variant="default">
-                    Introduction
-                </Button>
+                <p>Qué y cómo</p>
             </div>
         </article>
     );
@@ -59,12 +57,6 @@ export default function ProjectsComponent() {
                     "https://donkey-code.vercel.app/",
                     donkeycode,
                 )}
-                {/* {projectArticle(
-                    "ComPC Vision",
-                    "Educational project of computer vision + business.",
-                    "https://github.com/jcuencagento/compc-vision",
-                    compcvision,
-                )} */}
                 <article className="relative flex flex-1 flex-col items-center rounded-lg p-32 lg:p-1 lg:px-1">
                     <Image
                         key="aesthetic-programming"

@@ -8,7 +8,8 @@ import React, {useState, useEffect} from "react";
 import {topTracks} from "../spotify/SpotifyAPI";
 
 export default function TopTracks() {
-    const [tracks, setTracks] = useState<any[]>([]);
+    const [myTopTracks, setMyTopTracks] = useState<any>(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchTopTracks = async () => {
@@ -17,33 +18,34 @@ export default function TopTracks() {
                 const data = await response.json();
 
                 console.log(data.items);
-                setTracks(data.items);
+                setMyTopTracks(data.items);
+                setLoading(false);
             } catch (error) {
-                //Something will be done...
+                // Handle error...
+                setLoading(false);
             }
         };
 
         fetchTopTracks();
     }, []);
 
-    if (tracks && tracks.length > 0) {
-        return (
-            <div>
-                <h2>Top Tracks</h2>
+    return (
+        <div className="flex flex-col">
+            {loading ? (
+                <p>Loading...</p>
+            ) : myTopTracks ? (
                 <ul>
-                    {tracks.map((track: any) => (
+                    {myTopTracks.map((track: any) => (
                         <li key={track.id}>
-                            {track.name} by {track.artists[0].name}
+                            <a href={track.external_urls.spotify} rel="noreferrer" target="_blank">
+                                {track.name} by {track.artists[0].name}
+                            </a>
                         </li>
                     ))}
                 </ul>
-            </div>
-        );
-    }
-
-    return (
-        <div>
-            <h2>No top tracks today 🥶</h2>
+            ) : (
+                <h2>No top tracks today 🥶</h2>
+            )}
         </div>
     );
 }

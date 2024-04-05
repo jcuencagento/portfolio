@@ -22,7 +22,7 @@ export default function NowListening() {
                 setNow(response);
                 setLoading(false);
             } catch (error) {
-                // Handle error
+                // Handle error...
                 setLoading(false);
             }
         };
@@ -34,24 +34,28 @@ export default function NowListening() {
         <div className="row-span-1 grid grid-cols-4">
             <div className="col-span-1 p-1">
                 {now ? (
-                    <Image
-                        key="spotify-offline"
-                        priority
-                        alt="Spotify offline"
-                        className="inset-0 h-full w-full rounded-xl object-cover"
-                        height={100}
-                        src={now.albumImageUrl}
-                        width={100}
-                    />
+                    <a href={now.songUrl} rel="noreferrer" target="_blank">
+                        <Image
+                            key="spotify-offline"
+                            priority
+                            alt="Spotify offline"
+                            className="inset-0 h-full w-full rounded-xl object-cover"
+                            height={100}
+                            src={now.albumImageUrl}
+                            width={100}
+                        />
+                    </a>
                 ) : (
-                    <Image
-                        key="spotify-offline"
-                        priority
-                        alt="Spotify offline"
-                        className="inset-0 h-full w-full rounded-xl object-cover"
-                        src={offline}
-                        style={{filter: "blur(2px)"}}
-                    />
+                    <a href="/misc">
+                        <Image
+                            key="spotify-offline"
+                            priority
+                            alt="Spotify offline"
+                            className="inset-0 h-full w-full rounded-xl object-cover"
+                            src={offline}
+                            style={{filter: "blur(2px)"}}
+                        />
+                    </a>
                 )}
             </div>
             <div className="col-span-3 m-auto p-1">
@@ -73,7 +77,7 @@ export default function NowListening() {
                         </div>
                     </Link>
                 ) : (
-                    <p>Not listening right now</p>
+                    <p>Offline right now</p>
                 )}
             </div>
         </div>

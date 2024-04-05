@@ -8,10 +8,10 @@ import Studies from "@/components/Studies";
 export default function HomePage() {
     return (
         <div className="grid auto-rows-auto grid-cols-1 gap-6 lg:grid-cols-3">
-            <Misc />
+            <Random />
             <Introduction />
             <Experience />
-            <Random />
+            <Misc />
             <Studies />
             <ProjectsComponent />
         </div>
