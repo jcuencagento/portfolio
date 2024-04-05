@@ -7,6 +7,11 @@ const nextConfig = {
     },
     images: {
         formats: ["image/webp"],
+        remotePatterns: [
+            {
+                hostname: "i.scdn.co",
+            },
+        ],
     },
 };
 

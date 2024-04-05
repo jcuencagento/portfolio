@@ -1,7 +1,9 @@
 import type {Metadata} from "next";
 
+import "rsuite/dist/rsuite-no-reset.min.css";
 import "@/app/globals.css";
 import Image from "next/image";
+import dotenv from "dotenv";
 
 import {ThemeProvider} from "@/components/ui/theme-provider";
 import Header from "@/components/Header";
@@ -9,6 +11,7 @@ import Footer from "@/components/Footer";
 
 import gradientImg from "../../public/gradient.webp";
 
+dotenv.config();
 const info = {
     name: "Javier Cuenca Gento",
     description: "Telecom Engineer",

@@ -11,7 +11,6 @@ import GitHubCalendar from "react-github-calendar";
 
 import aesthetic from "../../public/aesthetic.webp";
 import donkeycode from "../../public/donkeycode_project_HD.webp";
-//import compcvision from "../../public/compcvision_project_HD.webp";
 
 import {Button} from "./ui/button";
 
@@ -66,7 +65,7 @@ export default function ProjectsComponent() {
                     "https://github.com/jcuencagento/compc-vision",
                     compcvision,
                 )} */}
-                <article className="relative flex flex-1 flex-col items-center rounded-lg p-1 lg:px-1">
+                <article className="relative flex flex-1 flex-col items-center rounded-lg p-32 lg:p-1 lg:px-1">
                     <Image
                         key="aesthetic-programming"
                         priority

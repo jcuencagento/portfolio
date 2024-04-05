@@ -1,19 +1,25 @@
 import Image from "next/image";
 
 import me from "../../public/Nieve.webp";
-
-import {Button} from "./ui/button";
+import intro from "../../public/intro.webp";
 
 export default function Introduction() {
     return (
-        <div className="col-span-1 row-span-1 transform-gpu rounded-xl bg-blue-300 p-4 text-xl font-bold leading-[4rem] duration-500 hover:scale-95 lg:col-span-2">
-            <div className="mb-2 flex flex-col gap-2 p-2">
-                <article className="m-auto flex gap-6">
-                    <div className="flex flex-col">
-                        <p className="m-auto ml-8 text-3xl font-bold text-primary 2xl:text-6xl">
+        <div className="col-span-1 row-span-1 transform-gpu rounded-xl p-32 text-xl font-bold leading-[4rem] duration-500 hover:cursor-grab lg:col-span-2 lg:p-40">
+            <Image
+                key="intro-background"
+                alt="Intro background"
+                className="-z-1 absolute inset-0 h-full w-full rounded-xl object-cover"
+                src={intro}
+                style={{filter: "blur(1px)"}}
+            />
+            <div className="absolute bottom-0 left-0 right-0 top-0 mb-2 flex flex-col gap-2 p-2">
+                <article className="m-auto flex justify-between gap-8 lg:gap-16">
+                    <div className="flex flex-col rounded-2xl bg-white/50 p-1 px-2 shadow-xl shadow-gray-500/50 dark:bg-gray-800/50">
+                        <p className="m-auto ml-8 text-3xl font-extrabold text-primary/90 2xl:text-6xl">
                             hi <span className="wave transform-gpu">🤘</span>
                         </p>
-                        <p className="m-auto ml-1 text-2xl font-bold text-primary 2xl:text-4xl">Javi Cuenca here</p>
+                        <p className="m-auto ml-1 text-2xl font-extrabold text-primary/90 2xl:text-4xl">Javi Cuenca here</p>
                     </div>
                     <Image
                         priority
@@ -26,12 +32,15 @@ export default function Introduction() {
                         }}
                     />
                 </article>
-                <p className="m-auto text-lg font-semibold text-primary lg:text-xl">Telecommunications engineer and software developer</p>
-                <p className="m-auto text-lg font-bold italic text-primary lg:text-xl">+5 years coding +2 professionally</p>
+                <div className="m-auto mb-0 mt-0 flex flex-col rounded-2xl bg-white/50 px-2 shadow-xl shadow-gray-500/50 dark:bg-gray-800/50 lg:mb-2 lg:mt-2">
+                    <p className="m-auto mb-0 p-1 text-lg font-extrabold text-primary/90 lg:text-xl">
+                        Telecommunications engineer and software developer
+                    </p>
+                    <p className="m-auto mb-0 mt-0 p-1 text-lg font-extrabold italic text-primary/90 lg:text-2xl  ">
+                        +5 years coding +2 professionally
+                    </p>
+                </div>
             </div>
-            <Button className="flex flex-grow" variant="default">
-                Introduction
-            </Button>
         </div>
     );
 }
