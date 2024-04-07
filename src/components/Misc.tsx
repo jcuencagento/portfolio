@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import NowListening from "./NowListening";
 import {Button} from "./ui/button";
+import Discord from "./Discord";
 
 export default function Misc() {
     return (
@@ -14,9 +15,7 @@ export default function Misc() {
                 <Link aria-label="More projects" className="grid-row-1 m-auto p-2" href="/misc">
                     <Button>Misc whatevers</Button>
                 </Link>
-                <div className="grid-row-1 m-auto p-2">
-                    <p>future Discord component..</p>
-                </div>
+                <Discord />
             </div>
         </div>
     );

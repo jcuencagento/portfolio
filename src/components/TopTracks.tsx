@@ -17,7 +17,6 @@ export default function TopTracks() {
                 const response = await topTracks();
                 const data = await response.json();
 
-                console.log(data.items);
                 setMyTopTracks(data.items);
                 setLoading(false);
             } catch (error) {
