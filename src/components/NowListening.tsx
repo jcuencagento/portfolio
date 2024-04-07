@@ -46,7 +46,7 @@ export default function NowListening() {
                         />
                     </a>
                 ) : (
-                    <a href="/misc">
+                    <a href="https://open.spotify.com/user/thekingeorge" rel="noreferrer" target="_blank">
                         <Image
                             key="spotify-offline"
                             priority
@@ -60,7 +60,10 @@ export default function NowListening() {
             </div>
             <div className="col-span-3 m-auto p-1">
                 {loading ? (
-                    <p>Loading...</p>
+                    <article className="m-auto flex flex-col">
+                        <p className="text-lg font-bold">Loading...</p>
+                        <p className="text-base italic">⌛ wait ⏰</p>
+                    </article>
                 ) : now ? (
                     <Link
                         aria-label="Spotify song"
@@ -77,7 +80,14 @@ export default function NowListening() {
                         </div>
                     </Link>
                 ) : (
-                    <p>Offline right now</p>
+                    <Link href="/misc">
+                        <div className="transform-gpu duration-300 hover:scale-95">
+                            <article className="m-auto flex flex-col">
+                                <p className="text-lg font-bold">Offline...</p>
+                                <p className="text-base italic">Click to see recomms 😜</p>
+                            </article>
+                        </div>
+                    </Link>
                 )}
             </div>
         </div>
