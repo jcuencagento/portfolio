@@ -11,7 +11,7 @@ import jujutsu from "../../public/animes/jujutsu.webp";
 import hunter from "../../public/animes/hunter.webp";
 import kimetsu from "../../public/animes/kimetsu.webp";
 
-export default function MyAnime() {
+export default function MyExperience() {
     const favAnimes = [
         {
             id: 1,

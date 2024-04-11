@@ -112,7 +112,7 @@ export default function MyMovies() {
                 {favMovies.slice(0, 4).map((movie: any) => (
                     <article
                         key={movie.id}
-                        className="relative m-auto flex h-full w-full transform-gpu items-center justify-center duration-300 hover:scale-95 hover:opacity-50 lg:p-8"
+                        className="relative m-auto flex h-full w-full transform-gpu items-center justify-center shadow-xl duration-300 hover:scale-95 hover:opacity-50 lg:p-8"
                     >
                         <Link href={movie.letterboxdUrl || "/misc"} rel="noreferrer" target="_blank">
                             <Image
@@ -146,7 +146,7 @@ export default function MyMovies() {
                     {myMoviesToSee.slice(0, 4).map((track: any) => (
                         <article
                             key={track.id}
-                            className="relative m-auto flex h-full w-full transform-gpu items-center justify-center duration-300 hover:scale-95 hover:opacity-50 lg:p-8"
+                            className="relative m-auto flex h-full w-full transform-gpu items-center justify-center shadow-xl duration-300 hover:scale-95 hover:opacity-50 lg:p-8"
                         >
                             <Link href={track.external_urls.spotify || "/misc"} rel="noreferrer" target="_blank">
                                 <Image
