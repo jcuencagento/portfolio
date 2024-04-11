@@ -7,11 +7,22 @@ import {Techs} from "./ui/techs";
 
 export default function Studies() {
     return (
-        <div className="row-span-2 rounded-xl bg-red-300 p-2 lg:row-span-1">
-            <div className="m-auto m-auto mb-4 flex flex-col">
-                <p className="m-auto p-2 text-lg font-bold">
+        <div className="row-span-2 rounded-xl p-0 lg:row-span-1">
+            <div className="relative m-auto mb-0 flex h-full flex-col">
+                <Image
+                    key="spotify-background"
+                    priority
+                    alt="Background Spotify"
+                    className="absolute inset-0 h-full w-full rounded-xl object-cover"
+                    src={titulo}
+                    style={{
+                        maskImage: "linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 80%)",
+                        WebkitMaskImage: "linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 80%)", // For Safari
+                    }}
+                />
+                <h2 className="m-auto p-2 text-lg font-bold text-black">
                     Telecommunications engineer at <span>UC3M</span>
-                </p>
+                </h2>
                 <div className="m-auto flex flex-col gap-2 lg:flex-row">
                     <div className="mt-4 flex flex-col">
                         <div className="flex flex-1 flex-col">
@@ -24,10 +35,7 @@ export default function Studies() {
                             <GiSpain className="m-auto ml-1" />
                         </div>
                     </div>
-                    <Image priority alt="Titulo" className="m-2 mr-0 h-auto w-auto rounded-lg lg:h-32" src={titulo} />
                 </div>
-            </div>
-            <div className="flex">
                 <Techs />
             </div>
         </div>

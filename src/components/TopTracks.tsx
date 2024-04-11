@@ -13,10 +13,32 @@ import {topTracks} from "../spotify/SpotifyAPI";
 
 function SkeletonLoader() {
     return (
-        <div className="grid grid-cols-4 gap-2">
-            {[...Array(20)].map((_, index) => (
-                <article key={index} className="relative m-auto flex h-full w-full items-center justify-center p-12">
-                    <div className="h-full w-full animate-pulse rounded-xl bg-gray-200" />
+        <div className="grid grid-cols-2 gap-2 lg:grid-cols-4">
+            {[...Array(16)].map((_, index) => (
+                <article
+                    key={index}
+                    className="relative m-auto flex h-full w-full transform-gpu items-center justify-center duration-300 hover:scale-95 hover:opacity-50 lg:p-8"
+                >
+                    <Link href="/misc" rel="noreferrer" target="_blank">
+                        <Image
+                            key={`image-skeletontrack-${index}`}
+                            priority
+                            alt="Album image"
+                            className="absolute inset-0 h-full w-full rounded-xl object-cover"
+                            height={1000}
+                            src={spotify_back}
+                            style={{filter: "blur(1px)", opacity: "0.65"}}
+                            width={1000}
+                        />
+                        <div className="align-center flex h-full w-full flex-col justify-center p-4">
+                            <div className="transform-gpu duration-300">
+                                <article className="m-auto flex flex-col">
+                                    <p className="text-base font-extrabold opacity-100 lg:text-lg">Loading</p>
+                                    <p className="text-sm font-bold italic opacity-100 lg:text-base">⌛</p>
+                                </article>
+                            </div>
+                        </div>
+                    </Link>
                 </article>
             ))}
         </div>
@@ -49,11 +71,11 @@ export default function TopTracks() {
             {loading ? (
                 <SkeletonLoader />
             ) : myTopTracks ? (
-                <div className="grid grid-cols-4 gap-2">
-                    {myTopTracks.map((track: any) => (
+                <div className="grid grid-cols-2 gap-2 lg:grid-cols-4">
+                    {myTopTracks.slice(0, 16).map((track: any) => (
                         <article
                             key={track.id}
-                            className="relative m-auto flex h-full w-full transform-gpu items-center justify-center p-8 duration-300 hover:scale-95 hover:opacity-50"
+                            className="relative m-auto flex h-full w-full transform-gpu items-center justify-center duration-300 hover:scale-95 hover:opacity-50 lg:p-8"
                         >
                             <Link href={track.external_urls.spotify || "/misc"} rel="noreferrer" target="_blank">
                                 <Image
@@ -65,11 +87,13 @@ export default function TopTracks() {
                                     src={track.album.images[0].url || spotify_back}
                                     width={1000}
                                 />
-                                <div className="align-center flex h-full w-full flex-col justify-center">
+                                <div className="align-center flex h-full w-full flex-col justify-center p-4">
                                     <div className="transform-gpu duration-300">
                                         <article className="m-auto flex flex-col">
-                                            <p className="text-lg font-extrabold opacity-100">{track.name}</p>
-                                            <p className="text-base font-bold italic opacity-100">{track.album.artists[0].name}</p>
+                                            <p className="text-base font-extrabold opacity-100 lg:text-lg">{track.name}</p>
+                                            <p className="text-sm font-bold italic opacity-100 lg:text-base">
+                                                {track.album.artists[0].name}
+                                            </p>
                                         </article>
                                     </div>
                                 </div>

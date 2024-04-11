@@ -87,7 +87,7 @@ function Marquee(props: MarqueeProps) {
 
 export function Techs() {
     return (
-        <div className="flex h-36 flex-col gap-2 overflow-hidden rounded-xl p-1">
+        <div className="mb-1 flex h-fit flex-col gap-1 overflow-hidden rounded-xl p-1">
             <Marquee fade pauseOnHover className="">
                 <IconTypescript height="48" width="48" />
                 <IconTailwindcss height="48" width="48" />
