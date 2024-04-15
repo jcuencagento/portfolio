@@ -68,7 +68,7 @@ export default function Discord() {
                         key="spotify-offline"
                         priority
                         alt="Spotify offline"
-                        className="inset-0 h-full w-full transform-gpu rounded-xl object-cover duration-300 hover:scale-105"
+                        className="inset-0 h-full w-full transform-gpu rounded-xl object-cover duration-300 ease-in-out hover:scale-105"
                         src={discord}
                         style={myStatus?.discord_status === "online" ? {} : {filter: "blur(1px)"}}
                     />
@@ -85,21 +85,21 @@ export default function Discord() {
                 />
                 <div className="align-center flex flex-col justify-center">
                     {loading ? (
-                        <div className="transform-gpu duration-300">
+                        <div className="transform-gpu duration-300 ease-in-out">
                             <article className="m-auto flex flex-col">
                                 <p className="text-xl font-extrabold">Loading...</p>
                                 <p className="text-lg font-bold italic">⌛ wait ⏰</p>
                             </article>
                         </div>
                     ) : myStatus?.discord_status === "online" ? (
-                        <div className="transform-gpu duration-300">
+                        <div className="transform-gpu duration-300 ease-in-out">
                             <article className="m-auto flex flex-col">
                                 <p className="text-xl font-extrabold">Online...</p>
                                 <p className="text-lg font-bold italic">💚🥒🍏</p>
                             </article>
                         </div>
                     ) : (
-                        <div className="transform-gpu duration-300">
+                        <div className="transform-gpu duration-300 ease-in-out">
                             <article className="m-auto flex flex-col">
                                 <p className="text-xl font-extrabold text-primary opacity-100">Offline...</p>
                                 <p className="text-lg font-bold italic">😡⭕❤️</p>

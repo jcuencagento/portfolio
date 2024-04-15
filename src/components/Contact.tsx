@@ -50,7 +50,7 @@ function Contact() {
                             </p>
                             <Button
                                 aria-label="Clipboard"
-                                className="m-auto transform-gpu rounded-xl bg-gray-300 p-4 text-black duration-300 hover:scale-95 hover:bg-blue-300"
+                                className="m-auto transform-gpu rounded-xl bg-gray-300 p-4 text-black duration-300 ease-in-out hover:scale-95 hover:bg-blue-300"
                                 onClick={() => {
                                     navigator.clipboard.writeText("jcuencagento@gmail.com");
                                     toast("Copied to clipboard.", {

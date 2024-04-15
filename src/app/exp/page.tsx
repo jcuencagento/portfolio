@@ -8,11 +8,11 @@ export default function Exp() {
                 <h1 className="text-xl xl:text-3xl">Experience and studies</h1>
             </div>
             <div className="my-4 flex w-full flex-col justify-center">
-                <p>Experience</p>
+                <h2 className="text-bold m-auto mb-4 text-xl lg:text-2xl">Experience</h2>
                 <MyExperience />
             </div>
             <div className="my-4 flex w-full flex-col justify-center">
-                <p>Studies</p>
+                <h2 className="text-bold m-auto mb-4 text-xl lg:text-2xl">Studies</h2>
                 <MyStudies />
             </div>
         </div>

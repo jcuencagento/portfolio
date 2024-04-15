@@ -44,14 +44,14 @@ export default function Letterboxd() {
                 />
                 <div className="align-center flex flex-col justify-center">
                     {loading ? (
-                        <div className="transform-gpu duration-300">
+                        <div className="transform-gpu duration-300 ease-in-out">
                             <article className="m-auto flex flex-col">
                                 <p className="text-xl font-extrabold">Loading...</p>
                                 <p className="text-lg font-bold italic">⌛ wait ⏰</p>
                             </article>
                         </div>
                     ) : now ? (
-                        <div className="transform-gpu duration-300">
+                        <div className="transform-gpu duration-300 ease-in-out">
                             <article className="m-auto flex flex-col">
                                 <p className="text-xl font-extrabold">Next movie</p>
                                 <p className="text-lg font-bold italic">blah blah blah</p>
@@ -59,7 +59,7 @@ export default function Letterboxd() {
                         </div>
                     ) : (
                         <Link href="/misc">
-                            <div className="transform-gpu duration-300 hover:scale-105">
+                            <div className="transform-gpu duration-300 ease-in-out hover:scale-105">
                                 <article className="m-auto flex flex-col">
                                     <p className="text-xl font-extrabold">Next movie</p>
                                     <p className="text-lg font-bold italic">blah blah blah</p>
@@ -75,7 +75,7 @@ export default function Letterboxd() {
                         key="letterboxd"
                         priority
                         alt="Letterboxd"
-                        className="inset-0 h-full w-full transform-gpu rounded-xl object-cover duration-300 hover:scale-105"
+                        className="inset-0 h-full w-full transform-gpu rounded-xl object-cover duration-300 ease-in-out hover:scale-105"
                         height={100}
                         src={letterbox}
                         width={100}

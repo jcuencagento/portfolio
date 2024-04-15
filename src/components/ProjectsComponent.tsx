@@ -10,7 +10,7 @@ import Link from "next/link";
 import GitHubCalendar from "react-github-calendar";
 
 import aesthetic from "../../public/aesthetic.webp";
-import donkeycode from "../../public/donkeycode_project_HD.webp";
+import donkeycode from "../../public/projects/donkeycode_project_HD.webp";
 
 import {Button} from "./ui/button";
 
@@ -23,7 +23,7 @@ const projectArticle = (name: string, description: string, link: string, image: 
                 <Image
                     priority
                     alt={name}
-                    className="m-3 h-48 w-auto transform-gpu rounded-2xl duration-300 ease-in-out hover:scale-95"
+                    className="m-3 h-48 w-auto transform-gpu rounded-2xl duration-300 ease-in-out ease-in-out hover:scale-95"
                     src={image}
                 />
             </a>
@@ -71,7 +71,7 @@ export default function ProjectsComponent() {
                         </Link>
                         <Link
                             aria-label="GitHub"
-                            className="m-auto mb-1 w-4/5 transform-gpu p-2 duration-300 ease-in-out hover:scale-95 xl:w-full"
+                            className="m-auto mb-1 w-4/5 transform-gpu p-2 duration-300 ease-in-out ease-in-out xl:w-full"
                             href="https://github.com/jcuencagento/"
                             rel="noreferrer"
                             target="_blank"

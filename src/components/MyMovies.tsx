@@ -21,7 +21,7 @@ function SkeletonLoader() {
             {[...Array(4)].map((_, index) => (
                 <article
                     key={index}
-                    className="relative m-auto flex h-full w-full transform-gpu items-center justify-center duration-300 hover:scale-95 hover:opacity-50 lg:p-8"
+                    className="relative m-auto flex h-full w-full transform-gpu items-center justify-center duration-300 ease-in-out hover:scale-95 lg:p-8"
                 >
                     <Link href="/misc">
                         <Image
@@ -35,7 +35,7 @@ function SkeletonLoader() {
                             width={1000}
                         />
                         <div className="align-center flex h-full w-full flex-col justify-center p-4">
-                            <div className="transform-gpu duration-300">
+                            <div className="transform-gpu duration-300 ease-in-out">
                                 <article className="m-auto flex flex-col">
                                     <p className="text-base font-extrabold opacity-100 lg:text-lg">Loading...</p>
                                     <p className="text-sm font-bold italic opacity-100 lg:text-base">⌛</p>
@@ -107,12 +107,12 @@ export default function MyMovies() {
 
     return (
         <div className="flex w-full flex-col">
-            <h2 className="m-auto mb-2">Fav Movies</h2>
+            <h2 className="m-auto mb-2">Some Fav Movies</h2>
             <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
                 {favMovies.slice(0, 4).map((movie: any) => (
                     <article
                         key={movie.id}
-                        className="relative m-auto flex h-full w-full transform-gpu items-center justify-center shadow-xl duration-300 hover:scale-95 hover:opacity-50 lg:p-8"
+                        className="relative m-auto flex h-full w-full transform-gpu items-center justify-center rounded-2xl border-4 border-primary shadow-xl duration-300 ease-in-out hover:scale-95 lg:p-8"
                     >
                         <Link href={movie.letterboxdUrl || "/misc"} rel="noreferrer" target="_blank">
                             <Image
@@ -125,7 +125,7 @@ export default function MyMovies() {
                                 width={1000}
                             />
                             <div className="align-center flex h-full w-full flex-col justify-center p-4 py-8">
-                                <div className="transform-gpu duration-300">
+                                <div className="transform-gpu duration-300 ease-in-out">
                                     <article className="m-auto flex flex-col">
                                         <p className="text-base font-extrabold opacity-100 lg:text-lg">{movie.name}</p>
                                         <p className="text-sm font-bold italic opacity-100 lg:text-base">
@@ -146,7 +146,7 @@ export default function MyMovies() {
                     {myMoviesToSee.slice(0, 4).map((track: any) => (
                         <article
                             key={track.id}
-                            className="relative m-auto flex h-full w-full transform-gpu items-center justify-center shadow-xl duration-300 hover:scale-95 hover:opacity-50 lg:p-8"
+                            className="relative m-auto flex h-full w-full transform-gpu items-center justify-center rounded-2xl border-4 border-primary shadow-xl duration-300 ease-in-out hover:scale-95 lg:p-8"
                         >
                             <Link href={track.external_urls.spotify || "/misc"} rel="noreferrer" target="_blank">
                                 <Image
@@ -159,7 +159,7 @@ export default function MyMovies() {
                                     width={1000}
                                 />
                                 <div className="align-center flex h-full w-full flex-col justify-center p-4 py-8">
-                                    <div className="transform-gpu duration-300">
+                                    <div className="transform-gpu duration-300 ease-in-out">
                                         <article className="m-auto flex flex-col">
                                             <p className="text-base font-extrabold opacity-100 lg:text-lg">{track.name}</p>
                                             <p className="text-sm font-bold italic opacity-100 lg:text-base">

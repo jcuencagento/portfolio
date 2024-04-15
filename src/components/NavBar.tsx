@@ -22,7 +22,7 @@ function NavBar() {
                         <Link
                             className={
                                 "relative transform-gpu rounded-full px-3 py-2 transition-all " +
-                                (path == href ? "cursor-default" : "hover:opacity-50")
+                                (path == href ? "cursor-default" : "ty-50")
                             }
                             href={href}
                         >
