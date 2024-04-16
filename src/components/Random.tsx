@@ -47,7 +47,7 @@ export default function Random() {
             const randomIndex = Math.floor(Math.random() * images.length);
 
             setImageIndex(randomIndex);
-        }, 5000);
+        }, 7500);
 
         return () => clearInterval(interval);
     }, []);

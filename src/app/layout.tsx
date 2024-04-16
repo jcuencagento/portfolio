@@ -14,15 +14,49 @@ dotenv.config();
 const info = {
     name: "Javier Cuenca Gento",
     description: "Telecom Engineer",
+    url: "https://jcuencagento.dev",
 };
 
 export const metadata: Metadata = {
-    title: info.name,
+    title: {
+        template: `%s | ${info.name}`,
+        default: info.name,
+    },
     description: info.description,
     authors: {
         name: info.name,
     },
     creator: info.name,
+    keywords: ["Next.js", "TypeScript", "React", "Web Development", "Portfolio"],
+    metadataBase: new URL(info.url),
+    alternates: {
+        canonical: "/",
+        languages: {
+            "en-US": "/en-US",
+            "es-ES": "/es-ES",
+        },
+    },
+    openGraph: {
+        title: info.name,
+        description: info.description,
+        url: info.url,
+        siteName: info.name,
+        images: [
+            {
+                url: "https://www.klipartz.com/en/sticker-png-towap", // Must be an absolute URL
+                width: 800,
+                height: 600,
+            },
+            {
+                url: "https://www.klipartz.com/en/sticker-png-towap", // Must be an absolute URL
+                width: 1800,
+                height: 1600,
+                alt: "My custom alt",
+            },
+        ],
+        locale: "es_ES",
+        type: "website",
+    },
 };
 
 interface ChildrenProps {
