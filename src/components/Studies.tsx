@@ -7,7 +7,7 @@ import {Techs} from "./ui/techs";
 
 export default function Studies() {
     return (
-        <div className="row-span-2 rounded-xl p-0 lg:row-span-1">
+        <div className="col-span-2 row-span-2 h-96 rounded-xl p-2 lg:row-span-1">
             <div className="relative m-auto mb-0 flex h-full flex-col">
                 <Image
                     key="spotify-background"

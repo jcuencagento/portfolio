@@ -1,3 +1,4 @@
+import DonkeyCodeVideo from "@/components/DonkeyCodeVideo";
 import Experience from "@/components/Experience";
 import Introduction from "@/components/Introduction";
 import Misc from "@/components/Misc";
@@ -12,8 +13,10 @@ export default function HomePage() {
             <Introduction />
             <Experience />
             <Misc />
-            <Studies />
             <ProjectsComponent />
+            <Studies />
+            <DonkeyCodeVideo />
+            <Random />
         </div>
     );
 }

@@ -9,10 +9,8 @@ import Link from "next/link";
 import GitHubCalendar from "react-github-calendar";
 
 import aesthetic from "../../public/aesthetic.webp";
-import donkeycode from "../../public/projects/donkeycode_project_HD.webp";
 
 import {Button} from "./ui/button";
-import projectArticle from "./ProjectArticle";
 
 export default function ProjectsComponent() {
     const selectLastHalfYear = (data: any[]) => {
@@ -29,50 +27,41 @@ export default function ProjectsComponent() {
     };
 
     return (
-        <div className="col-span-1 row-span-1 transform-gpu rounded-xl p-2 font-bold leading-[4rem] duration-500 lg:col-span-2 lg:p-4">
-            <div className="grid auto-rows-auto grid-cols-1 gap-6 lg:grid-cols-2">
-                <article className="relative flex flex-1 flex-col items-center rounded-lg p-32 lg:p-1 lg:px-1">
-                    <Image
-                        key="aesthetic-programming"
-                        priority
-                        alt="Aesthetic programming"
-                        className="absolute inset-0 h-full w-full rounded-xl object-cover"
-                        src={aesthetic}
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 top-0 flex flex-col items-center justify-center">
-                        <Link aria-label="More projects" className="m-auto" href="/projects">
-                            <Button>Go to Projects</Button>
-                        </Link>
-                        <Link
-                            aria-label="GitHub"
-                            className="m-auto mb-1 w-4/5 transform-gpu p-2 duration-300 ease-in-out ease-in-out xl:w-full"
-                            href="https://github.com/jcuencagento/"
-                            rel="noreferrer"
-                            target="_blank"
-                        >
-                            <GitHubCalendar
-                                hideColorLegend
-                                hideTotalCount
-                                blockMargin={3}
-                                style={{overflow: "hidden", margin: "auto"}}
-                                theme={{
-                                    light: ["#d2eed8", "#b3ff6a", "#7dff00", "#48bf53", "#11823b"],
-                                    dark: ["#def3f6", "#b3ff6a", "#7dff00", "#48bf53", "#11823b"],
-                                }}
-                                transformData={selectLastHalfYear}
-                                username="jcuencagento"
-                            />
-                        </Link>
-                    </div>
-                </article>
-                {projectArticle(
-                    "Donkey Code",
-                    "Interactive typing and coding test to practice.",
-                    "https://donkey-code.vercel.app/",
-                    donkeycode,
-                    ["NextJS", "TypeScript", "Tailwind"],
-                )}
-            </div>
+        <div className="col-span-2 row-span-1 transform-gpu rounded-xl p-2 font-bold leading-[4rem] duration-500 lg:col-span-1 lg:p-4">
+            <article className="relative flex flex-1 flex-col items-center rounded-lg p-32 lg:p-40">
+                <Image
+                    key="aesthetic-programming"
+                    priority
+                    alt="Aesthetic programming"
+                    className="absolute inset-0 h-full w-full rounded-xl object-cover"
+                    src={aesthetic}
+                />
+                <div className="absolute bottom-0 left-0 right-0 top-0 flex flex-col items-center justify-center">
+                    <Link aria-label="More projects" className="m-auto" href="/projects">
+                        <Button>Go to Projects</Button>
+                    </Link>
+                    <Link
+                        aria-label="GitHub"
+                        className="m-auto mb-1 w-full transform-gpu p-2 duration-300 ease-in-out ease-in-out"
+                        href="https://github.com/jcuencagento/"
+                        rel="noreferrer"
+                        target="_blank"
+                    >
+                        <GitHubCalendar
+                            hideColorLegend
+                            hideTotalCount
+                            blockMargin={3}
+                            style={{overflow: "hidden", margin: "auto"}}
+                            theme={{
+                                light: ["#d2eed8", "#b3ff6a", "#7dff00", "#48bf53", "#11823b"],
+                                dark: ["#def3f6", "#b3ff6a", "#7dff00", "#48bf53", "#11823b"],
+                            }}
+                            transformData={selectLastHalfYear}
+                            username="jcuencagento"
+                        />
+                    </Link>
+                </div>
+            </article>
         </div>
     );
 }
