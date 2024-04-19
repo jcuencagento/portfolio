@@ -7,6 +7,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import GitHubCalendar from "react-github-calendar";
+import {LucideFolderGit2} from "lucide-react";
 
 import aesthetic from "../../public/aesthetic.webp";
 
@@ -38,7 +39,9 @@ export default function ProjectsComponent() {
                 />
                 <div className="absolute bottom-0 left-0 right-0 top-0 flex flex-col items-center justify-center">
                     <Link aria-label="More projects" className="m-auto" href="/projects">
-                        <Button>Go to Projects</Button>
+                        <Button className="flex flex-row gap-2">
+                            <LucideFolderGit2 height={12} width={12} /> <p>More Projects</p>
+                        </Button>
                     </Link>
                     <Link
                         aria-label="GitHub"

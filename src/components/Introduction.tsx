@@ -11,7 +11,7 @@ export default function Introduction() {
                 alt="Intro background"
                 className="-z-1 absolute inset-0 h-full w-full rounded-xl object-cover"
                 src={intro}
-                style={{filter: "blur(1px)"}}
+                style={{filter: "blur(1.5px)"}}
             />
             <div className="absolute bottom-0 left-0 right-0 top-0 mb-2 flex flex-col gap-2 p-2">
                 <article className="m-auto flex justify-between gap-8 lg:gap-16">
@@ -24,7 +24,7 @@ export default function Introduction() {
                     <Image
                         priority
                         alt="Myself"
-                        className="rounded-full shadow-lg"
+                        className="transform-gpu rounded-full border-4 border-primary shadow-lg duration-300 ease-in-out hover:rotate-6 hover:scale-105"
                         src={me}
                         style={{
                             width: "10vh",

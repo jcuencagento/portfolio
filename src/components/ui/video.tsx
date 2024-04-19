@@ -6,7 +6,7 @@ export function Video() {
             loop
             muted
             playsInline
-            className="absolute inset-0 h-auto w-full rounded-xl border-4 border-black"
+            className="absolute inset-0 h-auto w-full rounded-2xl border-4 border-black"
             height="1200"
             poster="/projects/donkeycode_project_HD.webp"
             preload="none"

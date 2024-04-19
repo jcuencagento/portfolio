@@ -91,13 +91,17 @@ export function Techs() {
             <Marquee fade pauseOnHover className="">
                 <IconTypescript height="48" width="48" />
                 <IconTailwindcss height="48" width="48" />
+                <IconPrisma height="48" width="48" />
                 <IconNextJS height="48" width="48" />
                 <IconReactJS height="48" width="48" />
+                <IconFirebase height="48" width="48" />
                 <IconPython height="48" width="48" />
+                <IconNodeJS height="48" width="48" />
                 <IconPostgres height="48" width="48" />
                 <VscodeIconsFileTypeCpp3 height="48" width="48" />
-
+                <IconFigma height="48" width="48" />
                 <SkillIconsGolang height="48" width="48" />
+                <IconJest height="48" width="48" />
                 <SkillIconsGraphqlDark height="48" width="48" />
             </Marquee>
             <Marquee fade pauseOnHover reverse className="mt-2">
@@ -105,14 +109,16 @@ export function Techs() {
                 <SkillIconsDocker height="48" width="48" />
                 <LogosArchlinux height="48" width="48" />
                 <SkillIconsGodotLight height="48" width="48" />
-
+                <VscodeIconsFileTypeCpp3 height="48" width="48" />
                 <IconPrisma height="48" width="48" />
                 <IconMySQL height="48" width="48" />
                 <IconFirebase height="48" width="48" />
                 <IconFigma height="48" width="48" />
                 <IconGit height="48" width="48" />
                 <IconVite height="48" width="48" />
+                <IconReactJS height="48" width="48" />
                 <IconCloudflare height="48" width="48" />
+                <IconTypescript height="48" width="48" />
                 <IconJest height="48" width="48" />
                 <IconNodeJS height="48" width="48" />
             </Marquee>

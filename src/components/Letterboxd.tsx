@@ -33,7 +33,7 @@ export default function Letterboxd() {
 
     return (
         <div className="row-span-1 grid grid-cols-4 gap-2">
-            <div className="relative col-span-3 m-auto flex h-full w-full items-center justify-center rounded-2xl border-4 border-primary p-1">
+            <div className="relative col-span-3 m-auto flex h-full w-full items-center justify-center rounded-2xl p-1">
                 <Image
                     key="spotify-background"
                     priority
