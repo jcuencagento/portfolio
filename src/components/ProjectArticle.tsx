@@ -7,7 +7,13 @@ import {LucideArrowUpRightFromSquare} from "lucide-react";
 
 import {IconNextJS, IconTailwindcss, IconTypescript, IconPostgres, IconPython, IconGit, IconReactJS} from "@/components/icons";
 
-export default function projectArticle(name: string, testUrl: string, githubUrl: string, image: StaticImageData, stack: string[]) {
+export default function projectArticle(
+    name: string,
+    testUrl: string,
+    githubUrl: string | undefined,
+    image: StaticImageData,
+    stack: string[],
+) {
     return (
         <article className="col-span-1 flex flex-1 flex-col items-center p-2 lg:px-6">
             <div className="relative flex h-full w-full flex-col rounded-2xl border-4 border-primary">

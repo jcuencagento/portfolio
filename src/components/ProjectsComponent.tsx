@@ -28,8 +28,8 @@ export default function ProjectsComponent() {
     };
 
     return (
-        <div className="col-span-2 row-span-1 transform-gpu rounded-xl p-2 font-bold leading-[4rem] duration-500 lg:col-span-1 lg:p-4">
-            <article className="relative flex flex-1 flex-col items-center rounded-lg p-32 lg:p-40">
+        <div className="col-span-2 row-span-1 m-auto w-4/5 transform-gpu rounded-xl p-2 font-bold leading-[4rem] duration-500 lg:col-span-1 lg:p-4">
+            <article className="relative flex w-full flex-1 flex-col items-center rounded-lg p-32 lg:p-44">
                 <Image
                     key="aesthetic-programming"
                     priority
@@ -37,15 +37,15 @@ export default function ProjectsComponent() {
                     className="absolute inset-0 h-full w-full rounded-xl object-cover"
                     src={aesthetic}
                 />
-                <div className="absolute bottom-0 left-0 right-0 top-0 flex flex-col items-center justify-center">
-                    <Link aria-label="More projects" className="m-auto" href="/projects">
-                        <Button className="flex flex-row gap-2">
-                            <LucideFolderGit2 height={12} width={12} /> <p>More Projects</p>
+                <div className="absolute bottom-0 left-0 right-0 top-0 flex flex-col items-center justify-around">
+                    <Link aria-label="More projects" href="/projects">
+                        <Button className="flex flex-row gap-2 p-6">
+                            <LucideFolderGit2 height={14} width={14} /> <p>More Projects</p>
                         </Button>
                     </Link>
                     <Link
                         aria-label="GitHub"
-                        className="m-auto mb-1 w-full transform-gpu p-2 duration-300 ease-in-out ease-in-out"
+                        className="w-full transform-gpu duration-300 ease-in-out ease-in-out"
                         href="https://github.com/jcuencagento/"
                         rel="noreferrer"
                         target="_blank"

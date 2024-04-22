@@ -34,40 +34,40 @@ export default function Letterboxd() {
     return (
         <div className="row-span-1 grid grid-cols-4 gap-2">
             <div className="relative col-span-3 m-auto flex h-full w-full items-center justify-center rounded-2xl p-1">
-                <Image
-                    key="spotify-background"
-                    priority
-                    alt="Background Spotify"
-                    className="absolute inset-0 h-full w-full rounded-xl object-cover"
-                    src={letterboxd_back}
-                    style={{filter: "blur(0.5px)", opacity: "0.5"}}
-                />
-                <div className="align-center flex flex-col justify-center">
-                    {loading ? (
-                        <div className="transform-gpu duration-300 ease-in-out">
-                            <article className="m-auto flex flex-col">
-                                <p className="text-xl font-extrabold">Loading...</p>
-                                <p className="text-lg font-bold italic">⌛ wait ⏰</p>
-                            </article>
-                        </div>
-                    ) : now ? (
-                        <div className="transform-gpu duration-300 ease-in-out">
-                            <article className="m-auto flex flex-col">
-                                <p className="text-xl font-extrabold">Next movie</p>
-                                <p className="text-lg font-bold italic">blah blah blah</p>
-                            </article>
-                        </div>
-                    ) : (
-                        <Link href="/misc">
+                <Link href="/misc">
+                    <Image
+                        key="spotify-background"
+                        priority
+                        alt="Background Spotify"
+                        className="absolute inset-0 h-full w-full rounded-xl object-cover"
+                        src={letterboxd_back}
+                        style={{filter: "blur(0.5px)", opacity: "0.5"}}
+                    />
+                    <div className="align-center flex flex-col justify-center text-transparent">
+                        {loading ? (
+                            <div className="transform-gpu duration-300 ease-in-out">
+                                <article className="m-auto flex flex-col">
+                                    <p className="text-xl font-extrabold">Loading...</p>
+                                    <p className="text-lg font-bold italic">⌛ wait ⏰</p>
+                                </article>
+                            </div>
+                        ) : now ? (
+                            <div className="transform-gpu duration-300 ease-in-out">
+                                <article className="m-auto flex flex-col">
+                                    <p className="text-xl font-extrabold">Next movie</p>
+                                    <p className="text-lg font-bold italic">blah blah blah</p>
+                                </article>
+                            </div>
+                        ) : (
                             <div className="transform-gpu duration-300 ease-in-out hover:scale-105">
                                 <article className="m-auto flex flex-col">
                                     <p className="text-xl font-extrabold">Next movie</p>
                                     <p className="text-lg font-bold italic">blah blah blah</p>
                                 </article>
                             </div>
-                        </Link>
-                    )}
-                </div>
+                        )}
+                    </div>
+                </Link>
             </div>
             <div className="col-span-1 p-1">
                 <a href="https://letterboxd.com/jabicuencag/" rel="noreferrer" target="_blank">

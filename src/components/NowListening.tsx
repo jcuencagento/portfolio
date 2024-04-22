@@ -87,10 +87,9 @@ export default function NowListening() {
                         </div>
                     ) : (
                         <Link href="/misc">
-                            <div className="transform-gpu duration-300 ease-in-out hover:scale-105">
+                            <div className="transform-gpu duration-300 ease-in-out">
                                 <article className="m-auto flex flex-col">
                                     <p className="text-xl font-extrabold">Offline...</p>
-                                    <p className="text-lg font-bold italic">Click to see recomms 😜</p>
                                 </article>
                             </div>
                         </Link>

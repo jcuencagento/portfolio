@@ -11,11 +11,11 @@ export default function Introduction() {
                 alt="Intro background"
                 className="-z-1 absolute inset-0 h-full w-full rounded-xl object-cover"
                 src={intro}
-                style={{filter: "blur(1.5px)"}}
+                style={{filter: "blur(1.5px)", opacity: "0.4"}}
             />
             <div className="absolute bottom-0 left-0 right-0 top-0 mb-2 flex flex-col gap-2 p-2">
                 <article className="m-auto flex justify-between gap-8 lg:gap-16">
-                    <div className="flex flex-col rounded-2xl bg-white/50 p-1 px-2 shadow-xl shadow-gray-500/50 dark:bg-gray-800/50">
+                    <div className="flex flex-col rounded-2xl p-1 px-2">
                         <p className="m-auto ml-8 text-3xl font-extrabold text-primary/90 2xl:text-6xl">
                             hi <span className="wave transform-gpu">🤘</span>
                         </p>
@@ -32,7 +32,7 @@ export default function Introduction() {
                         }}
                     />
                 </article>
-                <div className="m-auto mb-0 mt-0 flex flex-col rounded-2xl bg-white/50 px-2 shadow-xl shadow-gray-500/50 dark:bg-gray-800/50 lg:mb-2 lg:mt-2">
+                <div className="m-auto mb-0 mt-0 flex flex-col rounded-2xl px-2 lg:mb-2 lg:mt-2">
                     <p className="m-auto mb-0 p-1 text-lg font-extrabold text-primary/90 lg:text-xl">
                         Telecommunications engineer and software developer
                     </p>

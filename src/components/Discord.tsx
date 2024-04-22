@@ -95,14 +95,12 @@ export default function Discord() {
                         <div className="transform-gpu duration-300 ease-in-out">
                             <article className="m-auto flex flex-col">
                                 <p className="text-xl font-extrabold">Online...</p>
-                                <p className="text-lg font-bold italic">💚🥒🍏</p>
                             </article>
                         </div>
                     ) : (
                         <div className="transform-gpu duration-300 ease-in-out">
                             <article className="m-auto flex flex-col">
                                 <p className="text-xl font-extrabold text-primary opacity-100">Offline...</p>
-                                <p className="text-lg font-bold italic">😡⭕❤️</p>
                             </article>
                         </div>
                     )}
