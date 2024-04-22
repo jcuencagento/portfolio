@@ -19,11 +19,11 @@ export default function Map() {
                     src={map}
                     width={800}
                 />
-                <p className="text-quaternary mt-2 flex items-center justify-end space-x-2 pt-2 text-base md:text-right">
-                    <LucidePin size={12} />
-                    <span>Madrid, Spain</span>
-                </p>
             </Link>
+            <p className="text-quaternary mt-2 flex items-center justify-end space-x-2 pt-2 text-base md:text-right">
+                <LucidePin size={12} />
+                <span>Madrid, Spain</span>
+            </p>
         </div>
     );
 }

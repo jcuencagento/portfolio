@@ -34,11 +34,13 @@ export default function projectArticle(name: string, testUrl: string, githubUrl:
                                 </div>
                             </Link>
                         ) : null}
-                        <Link href={githubUrl} rel="noreferrer" target="_blank">
-                            <div className="transform-gpu ease-in-out hover:scale-105">
-                                <IconGit height="32" width="32" />
-                            </div>
-                        </Link>
+                        {githubUrl ? (
+                            <Link href={githubUrl} rel="noreferrer" target="_blank">
+                                <div className="transform-gpu ease-in-out hover:scale-105">
+                                    <IconGit height="32" width="32" />
+                                </div>
+                            </Link>
+                        ) : null}
                     </div>
                     <div className="m-auto mb-2 mr-4 flex w-full flex-row items-end justify-end gap-2 p-1">
                         {stack.includes("TypeScript") && <IconTypescript height="32" width="32" />}

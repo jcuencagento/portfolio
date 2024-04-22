@@ -12,7 +12,7 @@ import levi_vert from "../../public/random/levi-vertical.webp";
 import levi2 from "../../public/random/levi-horizontal.webp";
 import dune2 from "../../public/random/dune2.webp";
 import goodfellas from "../../public/random/goodfellas.webp";
-import haliburton from "../../public/random/haliburton.webp";
+//import haliburton from "../../public/random/haliburton.webp";
 import monsters from "../../public/random/monsters.webp";
 import nirvana from "../../public/random/nirvana.webp";
 import reservoir from "../../public/random/reservoir.webp";
@@ -25,7 +25,7 @@ const images = [
     dune2,
     aot2,
     goodfellas,
-    haliburton,
+    //haliburton,
     eren_vert,
     monsters,
     nirvana,
