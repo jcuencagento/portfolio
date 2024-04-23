@@ -23,7 +23,7 @@ export default function MyExperience() {
                     <div className="transform-gpu duration-300 ease-in-out">
                         <article className="m-auto flex flex-col">
                             <p className="text-base font-extrabold opacity-100 lg:text-lg">Technology and Math Teacher</p>
-                            <p className="text-sm font-bold italic opacity-100 lg:text-base">Part time while in University</p>
+                            <p className="text-sm font-bold italic opacity-100 lg:text-base">Part time job in University</p>
                             <p className="text-sm font-bold italic opacity-100 lg:text-base">2019 - 2022</p>
                         </article>
                     </div>

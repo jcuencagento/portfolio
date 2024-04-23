@@ -5,7 +5,7 @@ import intro from "../../public/intro.webp";
 
 export default function Introduction() {
     return (
-        <div className="col-span-2 row-span-1 transform-gpu select-none rounded-xl p-32 text-xl font-bold leading-[4rem] duration-500 hover:cursor-grab lg:col-span-2 lg:p-40">
+        <div className="col-span-2 row-span-1 transform-gpu select-none rounded-xl p-32 text-xl font-bold leading-[4rem] duration-500 hover:cursor-grab lg:col-span-2 lg:h-80">
             <Image
                 key="intro-background"
                 alt="Intro background"

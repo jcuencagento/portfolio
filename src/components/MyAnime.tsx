@@ -53,7 +53,7 @@ export default function MyAnime() {
                 {favAnimes.slice(0, 4).map((anime: any) => (
                     <article
                         key={anime.id}
-                        className="relative m-auto flex h-full w-full transform-gpu items-center justify-center rounded-2xl border-4 border-primary shadow-xl duration-300 ease-in-out ease-in-out hover:scale-95 lg:p-8"
+                        className="relative m-auto flex h-full w-full transform-gpu items-center justify-center rounded-2xl border-4 border-primary shadow-xl duration-500 ease-in-out ease-in-out hover:scale-95 lg:p-16"
                     >
                         <Link href={anime.letterboxdUrl || "/misc"} rel="noreferrer" target="_blank">
                             <Image

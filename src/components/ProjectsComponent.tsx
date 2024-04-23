@@ -40,7 +40,7 @@ export default function ProjectsComponent() {
                 <div className="absolute bottom-0 left-0 right-0 top-0 flex flex-col items-center justify-around">
                     <Link aria-label="More projects" href="/projects">
                         <Button className="flex flex-row gap-2 p-6">
-                            <LucideFolderGit2 height={14} width={14} /> <p>More Projects</p>
+                            <LucideFolderGit2 height={14} width={14} /> <p>Some more projects...</p>
                         </Button>
                     </Link>
                     <Link

@@ -6,7 +6,6 @@
 "use client";
 import React, {useState, useEffect} from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 import discord_back from "../../public/discord-back.webp";
 import {getDiscordStatus} from "../discord/DiscordAPI";
@@ -63,16 +62,14 @@ export default function Discord() {
     return (
         <div className="row-span-1 grid grid-cols-4 gap-2">
             <div className="col-span-1 p-1">
-                <Link href="/misc">
-                    <Image
-                        key="spotify-offline"
-                        priority
-                        alt="Spotify offline"
-                        className="inset-0 h-full w-full transform-gpu rounded-xl object-cover duration-300 ease-in-out hover:scale-105"
-                        src={discord}
-                        style={myStatus?.discord_status === "online" ? {} : {filter: "blur(1px)"}}
-                    />
-                </Link>
+                <Image
+                    key="spotify-offline"
+                    priority
+                    alt="Spotify offline"
+                    className="inset-0 h-full w-full rounded-xl object-cover"
+                    src={discord}
+                    style={myStatus?.discord_status === "online" ? {} : {filter: "blur(1px)"}}
+                />
             </div>
             <div className="relative col-span-3 m-auto flex h-full w-full items-center justify-center rounded-2xl p-1">
                 <Image
@@ -81,24 +78,24 @@ export default function Discord() {
                     alt="Background Spotify"
                     className="absolute inset-0 h-full w-full rounded-xl object-cover"
                     src={discord_back}
-                    style={{filter: "blur(0.5px)", opacity: "0.65"}}
+                    style={{filter: "blur(0.5px)"}}
                 />
-                <div className="align-center flex flex-col justify-center">
+                <div className="align-center relative inset-0 m-auto flex flex-col justify-center">
                     {loading ? (
-                        <div className="transform-gpu duration-300 ease-in-out">
+                        <div>
                             <article className="m-auto flex flex-col">
                                 <p className="text-xl font-extrabold">Loading...</p>
                                 <p className="text-lg font-bold italic">⌛ wait ⏰</p>
                             </article>
                         </div>
                     ) : myStatus?.discord_status === "online" ? (
-                        <div className="transform-gpu duration-300 ease-in-out">
+                        <div>
                             <article className="m-auto flex flex-col">
                                 <p className="text-xl font-extrabold">Online...</p>
                             </article>
                         </div>
                     ) : (
-                        <div className="transform-gpu duration-300 ease-in-out">
+                        <div>
                             <article className="m-auto flex flex-col">
                                 <p className="text-xl font-extrabold text-primary opacity-100">Offline...</p>
                             </article>
