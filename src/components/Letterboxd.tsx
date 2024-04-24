@@ -41,7 +41,7 @@ export default function Letterboxd() {
                         alt="Background Spotify"
                         className="absolute inset-0 h-full w-full rounded-xl object-cover"
                         src={letterboxd_back}
-                        style={{filter: "blur(0.5px)", opacity: "0.5"}}
+                        style={{filter: "blur(0.25px)", opacity: "0.75"}}
                     />
                     <div className="align-center flex flex-col justify-center text-transparent">
                         {loading ? (

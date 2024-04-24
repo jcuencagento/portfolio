@@ -50,10 +50,10 @@ export default function MyAnime() {
     return (
         <div className="flex w-full flex-col">
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-                {favAnimes.slice(0, 4).map((anime: any) => (
+                {favAnimes.map((anime: any) => (
                     <article
                         key={anime.id}
-                        className="relative m-auto flex h-full w-full transform-gpu items-center justify-center rounded-2xl border-4 border-primary shadow-xl duration-500 ease-in-out ease-in-out hover:scale-95 lg:p-16"
+                        className="relative m-auto flex h-40 w-full transform-gpu items-center justify-center rounded-2xl border-4 border-primary shadow-xl duration-500 ease-in-out ease-in-out hover:scale-95 lg:h-72"
                     >
                         <Link href={anime.letterboxdUrl || "/misc"} rel="noreferrer" target="_blank">
                             <Image

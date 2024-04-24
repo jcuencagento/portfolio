@@ -27,7 +27,7 @@ function SkeletonLoader() {
             {[...Array(4)].map((_, index) => (
                 <article
                     key={index}
-                    className="relative m-auto flex h-full w-full transform-gpu items-center justify-center duration-300 ease-in-out hover:scale-95 lg:p-8"
+                    className="relative m-auto flex h-40 w-full transform-gpu items-center justify-center duration-300 ease-in-out hover:scale-95 lg:h-72"
                 >
                     <Link href="/misc">
                         <Image
@@ -40,7 +40,7 @@ function SkeletonLoader() {
                             style={{filter: "blur(1px)", opacity: "0.65"}}
                             width={1000}
                         />
-                        <div className="align-center flex h-full w-full flex-col justify-center p-4">
+                        <div className="align-center flex h-full w-full flex-col justify-center p-4 py-8">
                             <div className="transform-gpu duration-300 ease-in-out">
                                 <article className="m-auto flex flex-col">
                                     <p className="text-base font-extrabold opacity-100 lg:text-lg">Loading...</p>
@@ -152,10 +152,10 @@ export default function MyMovies() {
         <div className="flex w-full flex-col">
             <h2 className="m-auto mb-2">Some Fav Movies</h2>
             <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
-                {favMovies.slice(0, 4).map((movie: any) => (
+                {favMovies.map((movie: any) => (
                     <article
                         key={movie.id}
-                        className="relative m-auto flex h-full w-full transform-gpu items-center justify-center rounded-2xl border-4 border-primary shadow-xl duration-500 ease-in-out hover:scale-95 lg:p-16"
+                        className="relative m-auto flex h-40 w-full transform-gpu items-center justify-center rounded-2xl border-4 border-primary shadow-xl duration-500 ease-in-out hover:scale-95 lg:h-72"
                     >
                         <Link href={movie.letterboxdUrl || "/misc"} rel="noreferrer" target="_blank">
                             <Image
@@ -185,18 +185,18 @@ export default function MyMovies() {
             {loading ? (
                 <SkeletonLoader />
             ) : myMoviesToSee ? (
-                <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-                    {myMoviesToSee.slice(0, 4).map((movie: any) => (
+                <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
+                    {myMoviesToSee.map((movie: any) => (
                         <article
                             key={movie.id}
-                            className="relative m-auto flex h-full w-full items-center justify-center rounded-2xl lg:p-16"
+                            className="relative m-auto flex h-40 w-full transform-gpu items-center justify-center rounded-2xl duration-500 ease-in-out hover:scale-95 lg:h-72"
                         >
                             <Link href={movie.letterboxdUrl || "/misc"} rel="noreferrer" target="_blank">
                                 <Image
                                     key={`image-movie-${movie.id}`}
                                     priority
                                     alt="Album image"
-                                    className="absolute inset-0 h-full w-full transform-gpu rounded-2xl border-4 border-primary object-cover opacity-40 shadow-xl duration-500 ease-in-out hover:scale-105 hover:opacity-90"
+                                    className="absolute inset-0 h-full w-full rounded-2xl border-4 border-primary object-cover shadow-xl"
                                     height={1000}
                                     src={movie.imageSrc}
                                     width={1000}

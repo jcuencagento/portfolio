@@ -35,14 +35,14 @@ export default function projectArticle(
                     <div className="flex items-center gap-2">
                         {testUrl ? (
                             <Link href={testUrl} rel="noreferrer" target="_blank">
-                                <div className="transform-gpu ease-in-out hover:scale-105">
+                                <div className="transform-gpu duration-300 ease-in-out hover:scale-105">
                                     <LucideArrowUpRightFromSquare height="32" width="32" />
                                 </div>
                             </Link>
                         ) : null}
                         {githubUrl ? (
                             <Link href={githubUrl} rel="noreferrer" target="_blank">
-                                <div className="transform-gpu ease-in-out hover:scale-105">
+                                <div className="transform-gpu duration-300 ease-in-out hover:scale-105">
                                     <IconGit height="32" width="32" />
                                 </div>
                             </Link>

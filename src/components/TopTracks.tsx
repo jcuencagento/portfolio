@@ -102,7 +102,7 @@ export default function TopTracks() {
                     {myTopTracks.slice(0, 16).map((track: any) => (
                         <article
                             key={track.id}
-                            className="relative m-auto flex h-24 w-full transform-gpu items-center justify-center rounded-2xl border-4 border-primary shadow-xl duration-300 ease-in-out hover:scale-95 lg:h-40"
+                            className="relative m-auto flex h-24 w-full transform-gpu items-center justify-center rounded-2xl border-4 border-primary shadow-xl duration-300 ease-in-out hover:scale-95 hover:cursor-pointer lg:h-40"
                         >
                             <div onClick={() => (!isPlaying ? handlePlayPreview(track) : handleStopPreview(track))}>
                                 <Image
