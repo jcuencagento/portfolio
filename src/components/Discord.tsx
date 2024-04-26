@@ -86,7 +86,7 @@ export default function Discord() {
                 </Link>
             </div>
             <div className="relative col-span-3 m-auto flex h-full w-full items-center justify-center rounded-2xl p-1">
-                <Link href="misc">
+                <Link href="/projects">
                     <Image
                         key="spotify-background"
                         priority

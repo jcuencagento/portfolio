@@ -1,7 +1,6 @@
 import TopTracks from "@/components/TopTracks";
 import MyMovies from "@/components/MyMovies";
 import MyAnime from "@/components/MyAnime";
-import MySetup from "@/components/MySetup";
 
 export default function Personal() {
     return (
@@ -17,10 +16,6 @@ export default function Personal() {
             <div className="my-4 flex w-full flex-col justify-center">
                 <h2 className="text-bold m-auto mb-4 text-xl lg:text-2xl">Anime</h2>
                 <MyAnime />
-            </div>
-            <div className="my-4 flex w-full flex-col justify-center">
-                <h2 className="text-bold m-auto mb-4 text-xl lg:text-2xl">Setup</h2>
-                <MySetup />
             </div>
         </div>
     );

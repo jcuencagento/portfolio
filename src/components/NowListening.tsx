@@ -82,7 +82,7 @@ export default function NowListening() {
                             alt="Background Spotify"
                             className="absolute inset-0 h-full w-full rounded-xl object-cover"
                             src={spotify_back}
-                            style={{filter: "blur(0.25px)", opacity: "0.75"}}
+                            style={{filter: "blur(0.5px)", opacity: "0.35"}}
                         />
                         <div className="align-center flex flex-col justify-center">
                             {loading ? (
