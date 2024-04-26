@@ -1,6 +1,6 @@
-## Portfolio Javier Cuenca Gento
+## Personal website Javier Cuenca Gento
 
- ⚡ Personal
+ ⚡ Personal stuff
 
  🙏🏼 Initiated with [Create Appncy](https://github.com/goncy/create-appncy)
 

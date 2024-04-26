@@ -1,7 +1,7 @@
 import Image from "next/image";
 import {GiSpain} from "react-icons/gi";
 
-import titulo from "../../public/titulo-fake.jpeg";
+import titulo from "../../public/titulo-fake.webp";
 
 export default function Studies() {
     return (
@@ -14,7 +14,7 @@ export default function Studies() {
                     className="absolute inset-0 h-full w-full rounded-xl object-cover"
                     src={titulo}
                 />
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-black">
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-transparent">
                     <h2 className="m-auto p-2 text-lg font-bold">
                         Telecommunications engineer at <span>UC3M</span>
                     </h2>

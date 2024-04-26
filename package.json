@@ -1,7 +1,7 @@
 {
     "name": "portfolio",
     "author": "Javier Cuenca Gento",
-    "description": "Personal portfolio",
+    "description": "Personal website",
     "version": "0.1.0",
     "private": true,
     "scripts": {

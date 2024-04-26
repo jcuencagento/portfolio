@@ -12,7 +12,7 @@ import gradientImg from "../../public/gradient.webp";
 
 dotenv.config();
 const info = {
-    name: "Javier Cuenca Gento",
+    name: "jcuencagento - dev",
     description: "Telecom Engineer",
     url: "https://jcuencagento.dev",
 };
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         name: info.name,
     },
     creator: info.name,
-    keywords: ["Next.js", "TypeScript", "React", "Web Development", "Portfolio"],
+    keywords: ["Next.js", "TypeScript", "React", "Web Development", "Portfolio", "Website"],
     metadataBase: new URL(info.url),
     alternates: {
         canonical: "/",
