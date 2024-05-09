@@ -53,7 +53,7 @@ export default function Random() {
     }, []);
 
     return (
-        <div className="col-span-2 row-span-1 m-auto h-32 w-full transform-gpu rounded-xl text-xl font-bold leading-[4rem] duration-500 hover:scale-95 lg:col-span-1 lg:h-72 lg:w-4/5 lg:hover:scale-105">
+        <div className="col-span-2 row-span-1 m-auto h-32 w-full transform-gpu rounded-xl text-xl font-bold leading-[4rem] duration-500 hover:scale-95 lg:col-span-1 lg:h-72 lg:w-4/5 lg:p-4 lg:hover:scale-105">
             <Link href="/misc">
                 {images.map((img, index) => (
                     <Image

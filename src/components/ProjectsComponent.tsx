@@ -28,7 +28,7 @@ export default function ProjectsComponent() {
     };
 
     return (
-        <div className="col-span-2 row-span-1 m-auto w-4/5 transform-gpu rounded-xl p-2 font-bold leading-[4rem] duration-500 lg:col-span-1 lg:p-4">
+        <div className="col-span-2 row-span-1 m-auto w-full transform-gpu rounded-xl p-2 font-bold leading-[4rem] duration-500 lg:col-span-1 lg:p-4">
             <article className="relative flex w-full flex-1 flex-col items-center rounded-lg p-32 lg:p-44">
                 <Image
                     key="aesthetic-programming"

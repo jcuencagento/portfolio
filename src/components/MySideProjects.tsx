@@ -49,8 +49,8 @@ export default function MySideProjects() {
     return (
         <div className="flex w-full flex-col">
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-                {sideProjects.map((proj: any) => (
-                    <>{projectArticle(proj.name, proj.testUrl, proj.githubUrl, proj.imageSrc, proj.stack)}</>
+                {sideProjects.map((proj: any, index) => (
+                    <div key={proj.name + index}>{projectArticle(proj.name, proj.testUrl, proj.githubUrl, proj.imageSrc, proj.stack)}</div>
                 ))}
             </div>
         </div>

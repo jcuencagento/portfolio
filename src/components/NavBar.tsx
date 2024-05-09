@@ -37,9 +37,10 @@ function NavBar() {
                                         name === "me"
                                             ? {
                                                   borderRadius: 9999,
-                                                  marginTop: "5px",
-                                                  marginBlockEnd: "-2.5px",
-                                                  marginRight: "5px",
+                                                  marginTop: "7.5px",
+                                                  marginBottom: "-7.5px",
+                                                  marginRight: "2.5px",
+                                                  marginLeft: "-1px",
                                               }
                                             : {
                                                   borderRadius: 9999,

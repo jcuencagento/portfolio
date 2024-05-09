@@ -11,7 +11,7 @@ export default function Experience() {
     return (
         <div className="col-span-2 row-span-1 rounded-xl text-xl font-bold leading-[4rem]">
             <div className="grid h-full w-full grid-cols-1 lg:grid-cols-5">
-                <div className="relative col-span-1 mt-2 flex lg:col-span-3 lg:ml-2 lg:mt-0">
+                <div className="relative col-span-1 mt-2 flex lg:col-span-3 lg:ml-2 lg:mt-0 lg:p-2">
                     <div className="relative h-48 w-full lg:h-full">
                         <Image
                             priority
@@ -30,7 +30,7 @@ export default function Experience() {
                         </div>
                     </div>
                 </div>
-                <div className="relative col-span-1 mt-2 flex lg:col-span-2 lg:ml-2 lg:mt-0">
+                <div className="relative col-span-1 mt-2 flex lg:col-span-2 lg:ml-2 lg:mt-0 lg:p-4">
                     <div className="relative h-40 w-full lg:h-full">
                         <Image
                             priority

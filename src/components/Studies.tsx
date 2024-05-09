@@ -1,12 +1,13 @@
 import Image from "next/image";
 import {GiSpain} from "react-icons/gi";
+import Link from "next/link";
 
 import titulo from "../../public/titulo-fake.webp";
 
 export default function Studies() {
     return (
-        <div className="col-span-2 row-span-2 h-96 rounded-xl p-2 lg:row-span-1">
-            <div className="relative m-auto mb-0 flex h-full flex-col">
+        <div className="col-span-2 row-span-2 h-96 rounded-xl p-2 lg:row-span-1 lg:p-10">
+            <Link className="relative m-auto mb-0 flex h-full transform-gpu flex-col duration-500 hover:scale-105" href="/exp">
                 <Image
                     key="spotify-background"
                     priority
@@ -32,7 +33,7 @@ export default function Studies() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </Link>
         </div>
     );
 }

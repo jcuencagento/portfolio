@@ -5,14 +5,14 @@ import pixel_gif from "../../public/pixel_gif.gif";
 
 export default function Pixel() {
     return (
-        <div className="mt-1 h-[45px] w-[45px]">
+        <div className="mt-2 h-[40px] w-[40px]">
             <Image
                 alt="Pixel me"
                 className="pointer-events-none h-full w-full"
-                height="45"
+                height="40"
                 src={pixel_gif}
                 style={{color: "transparent"}}
-                width="45"
+                width="40"
             />
         </div>
     );
