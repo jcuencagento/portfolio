@@ -23,7 +23,7 @@ export default function Header() {
 
     return (
         <header className="mb-2 flex text-xl font-bold leading-[4rem] lg:mb-6">
-            <div className="m-auto mr-0 flex items-center justify-center text-primary">{renderIcon()}</div>
+            <div className="m-auto mr-0 flex items-center justify-center text-primary lg:mr-2">{renderIcon()}</div>
             <NavBar />
             <div className="m-auto w-20">
                 <ThemeSwitch />
