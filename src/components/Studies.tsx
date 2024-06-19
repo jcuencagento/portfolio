@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import titulo from "../../public/titulo-fake.webp";
+import titulo from "../../public/JavierCuencaGento.webp";
 
 export default function Studies() {
     return (
