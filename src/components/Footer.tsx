@@ -1,5 +1,6 @@
 import {BsGithub, BsLinkedin} from "react-icons/bs";
 import {BiCodeAlt} from "react-icons/bi";
+import {FaFileDownload} from "react-icons/fa";
 
 import Contact from "./Contact";
 
@@ -12,7 +13,7 @@ function Footer() {
                     <p className="text-xs font-semibold lg:text-lg">Javier Cuenca Gento</p>
                     <p className="font-extralight"> - </p>
                     <div className="flex gap-1 lg:gap-2">
-                        <p className="text-base text-xs font-bold lg:text-lg">
+                        <p className="text-xs font-bold lg:text-lg">
                             {" " + new Date().getFullYear() + " "}
                             <span className="wave transform-gpu">🛰️ </span>
                         </p>
@@ -31,6 +32,12 @@ function Footer() {
                     </a>
                     <a aria-label="Linkedin" href="https://www.linkedin.com/in/javiercuencagento/" rel="noreferrer" target="_blank">
                         <BsLinkedin
+                            className="text-primary/60 transition-colors duration-100 hover:scale-110 hover:text-primary"
+                            size={20}
+                        />
+                    </a>
+                    <a aria-label="Download CV" download="JavierCuencaGento_CV.pdf" href="/My_CV.pdf">
+                        <FaFileDownload
                             className="text-primary/60 transition-colors duration-100 hover:scale-110 hover:text-primary"
                             size={20}
                         />

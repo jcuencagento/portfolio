@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable react/button-has-type */
+import Link from "next/link";
+
 import styles from "@/styles/myexperience.module.css";
 
 export default function MyStudies() {
@@ -11,11 +13,13 @@ export default function MyStudies() {
             >
                 <div className="align-center flex h-full w-full flex-col justify-center p-4 py-28">
                     <div className="transform-gpu duration-300 ease-in-out">
-                        <article className="m-auto flex flex-col">
-                            <p className="text-base font-extrabold opacity-100 lg:text-lg">Telecommunications Engineering</p>
-                            <p className="text-sm font-bold italic opacity-100 lg:text-base">Universidad Carlos III de Madrid</p>
-                            <p className="text-sm font-bold italic opacity-100 lg:text-base">Finished in 2023</p>
-                        </article>
+                        <Link href="/degree">
+                            <article className="m-auto flex flex-col hover:cursor-pointer hover:text-orange-500">
+                                <p className="text-base font-extrabold opacity-100 lg:text-lg">Telecommunications Engineering</p>
+                                <p className="text-sm font-bold italic opacity-100 lg:text-base">Universidad Carlos III de Madrid</p>
+                                <p className="text-sm font-bold italic opacity-100 lg:text-base">Finished in 2023</p>
+                            </article>
+                        </Link>
                     </div>
                 </div>
             </article>
